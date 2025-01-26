@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            width: 360px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+    background-image: url('Banner.png');
+    background-size: cover; /* Makes the image cover the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 160px; /* Adjust the height as needed */
+    text-align: center;
+}
+
+
+        .card-header img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .card-header h1 {
+            color: white;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 0;
+        }
+
+      .profile-section {
+    text-align: center;
+    margin-top: -50px; 
+    padding: 10px 20px;
+    position: relative;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    position: relative;
+    background: white; 
+}
+
+.profile-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%; 
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%; 
+    z-index: 1; 
+    pointer-events: none;
+}
+
+
+        .profile-section h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 10px 0 5px;
+        }
+
+        .profile-section p {
+            font-size: 0.9em;
+            color: #555;
+            bottom-margin:1;
+        }
+
+       .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between rows */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+ .info-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+position: relative; 
+        }
+
+.info-row::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjusts the line's position above the row */
+    left: 10px; /* Adds left margin */
+    right: 10px; /* Adds right margin */
+    width: calc(100% - 20px); /* Ensures the line doesn't extend to the edges */
+    height: 1px; /* Thickness of the line */
+    background: #ddd; /* Line color */
+}
+
+
+.info-row img {
+    width: 20px; /* Adjust the size of the image */
+    height: 20px;
+   margin-left:20px;
+}
+
+.info-text {
+    font-size: 14px;
+    line-height: 1.2; /* Adjust line height to reduce the gap */
+    margin: 0; /* Remove any margin if added by default */
+}
+
+.info-text strong {
+    font-weight: 600; /* Bold text */
+    line-height: 1; /* Match line height to ensure no extra space */
+    margin: 0; /* Remove any extra spacing */
+}
+
+.info-row {
+    margin-bottom: 10px; /* Overall spacing between rows */
+}
+
+
+.info-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+position: relative; 
+}
+.info-address ::before {
+   content: "";
+    position: absolute;
+    top: -10px; /* Adjusts the line's position above the row */
+    left: 10px; /* Adds left margin */
+    right: 10px; /* Adds right margin */
+    width: calc(100% - 20px); /* Ensures the line doesn't extend to the edges */
+    height: 1px; /* Thickness of the line */
+    background: #ddd; /* Line color */
+}
+
+.info-address img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0; /* Prevent the image from resizing */
+margin-left:20px;
+}
+
+.info-address div {
+    flex-grow: 1; /* Allow the address text to take up remaining space */
+    color: #333;
+    line-height: 1.5; /* Improve text readability */
+}
+
+    </style>
+</head>
+<body>
+    <div class="card">
+
+    <div class="card-header">
+      
+    </div>
+    <div class="profile-section">
+        <img src="Ganesh.png" alt="Ganesh Kanase" class="profile-image">
+        <h2>Ganesh Kanase</h2>
+        <p>UX/UI Designer • Employee ID: 1370</p>
+    </div>
+
+
+  <div class="info-section">
+    <div class="info-row" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+    <img src="bold/call-calling.png" alt="Call">
+    <div class="info-text">
+        <div style="margin-bottom: 10px;">
+            <strong>+91 8208619012</strong><br>Primary Contact
+        </div>
+        <div>
+            <strong>+91 9420630984</strong><br>Emergency Contact
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="info-row">
+        <img src="bold/cake.png" alt="DOB">
+        <div class="info-text">
+            <strong>12-09-1999</strong> <br>DOB
+        </div>
+    </div>
+    <div class="info-row">
+        <img src="bold/sms.png" alt="Email">
+        <div class="info-text">
+            <strong>design@puretechnology.in</strong> <br>Primary Contact
+        </div>
+    </div>
+    <div class="info-row">
+        <img src="bold/drop.png" alt="Blood Group">
+        <div class="info-text">
+            <strong>AB +ve</strong> <br>Blood Group
+        </div>
+    </div>
+    <div class="info-row">
+        <img src="bold/briefcase.png" alt="Company">
+        <div class="info-text">
+           <strong> Pure Tech Codex </strong><br>Company
+        </div>
+    </div>
+    <div class="info-address">
+        <img src="bold/location.png" alt="Address">
+        <div>
+          <strong>  603, White Square, Hinjewadi-Wakad Road, Near Wakad Bridge, Phase 1, Hinjawadi, Pune, Maharashtra 411057</strong><br>Address
+        </div>
+    </div>
+</div>
+
+    </div>
+ 
+</body>
+</html>
